@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/png" href="img/fabicon.png">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ログイン画面 -->
+    <div class="login">
+        <div class="login_inner">
+            <p class="login_text">Login</p>
+            <button id="loginBtn" class="google-btn">
+                <span class="google-btn__icon">
+                    <img src="img/google-logo.png" alt="Googleロゴ" />
+                </span>
+                <span class="google-btn__text">Googleでログイン</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ログイン情報の入力ページ -->
+    <div class="personal_setting">
+        <div class="personal_setting_inner">
+            <h3 class="form_title">登録内容を入力してください</h3>
+
+            <form class="personal_setting_form" id="personalForm">
+                <!-- 名前 -->
+                <div class="form-group">
+                    <label>お名前：</label>
+                    <div class="name-row">
+                        <div class="name-field">
+                            <span class="name-sub-label">姓</span>
+                            <input type="text" id="lastName" name="lastName" required />
+                        </div>
+                        <div class="name-field">
+                            <span class="name-sub-label">名</span>
+                            <input type="text" id="firstName" name="firstName" required />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 表示名 -->
+                <div class="form-group">
+                    <label for="displayName">表示名：</label>
+                    <input type="text" id="displayName" name="displayName" required />
+                </div>
+
+                <!-- アイコン -->
+                <div class="form-group">
+                    <label for="iconImage">アイコン画像：</label>
+
+                    <div class="icon-preview">
+                        <img id="iconPreview" src="" style="display:none;" />
+                    </div>
+
+                    <input type="file" id="iconImage" name="iconImage" required />
+                </div>
+
+                <button type="submit" class="btn-primary">登録</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- チャットエリア -->
+    
+
+
+    <!-- JQueryが先 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- main.jsが後 -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>
