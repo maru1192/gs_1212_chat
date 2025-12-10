@@ -70,14 +70,28 @@
     </div>
 
     <!-- チャットエリア -->
-    
+    <div class="chat-section">
+        <div class="chat-wrapper">
+
+            <!-- メッセージ表示エリア -->
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <!-- 入力エリア（画面下部のバー） -->
+            <form class="chat-input-area" id="chatForm">
+                <textarea id="chatInput" placeholder="メッセージを入力..." autocomplete="off"></textarea>
+                <button type="submit" id="chatSendBtn">Send</button>
+            </form>
+        </div>
+    </div>
 
 
-    <!-- JQueryが先 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- main.jsが後 -->
-    <script type="module" src="js/main.js"></script>
+
+        <!-- JQueryが先 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- main.jsが後 -->
+        <script type="module" src="js/main.js"></script>
 
 </body>
 

@@ -53,6 +53,21 @@
 /* =============================
     ログイン後の個人設定フォーム
 ============================= */
+.personal_setting {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal_setting_inner {
+    border: 1px solid #e0e0e0;
+    margin: 0 auto;
+    padding: 24px 32px;
+    max-width: 520px;
+    box-sizing: border-box;
+}
+
 .personal_setting_form {
     max-width: 420px;
     margin: 0 auto;
@@ -135,12 +150,133 @@
     margin-bottom: 20px;
 }
 
-.personal_setting_inner {
-    border: 1px solid #e0e0e0;
+
+/* =============================
+    チャットエリア
+============================= */
+.chat-section {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+.chat-wrapper {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 24px 32px;
-    /* ← 100px → 24/32くらいに */
-    max-width: 520px;
-    /* カードの最大幅を決める */
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    /* 上:タイトル 中:メッセージ 下:入力バー */
+}
+
+.chat-title {
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* メッセージ表示エリア */
+.chat-messages {
+    flex: 1;
+    /* ここが余った高さぜんぶ使う */
+    padding: 12px 16px;
+    overflow-y: auto;
+    /* 多くなったらスクロール */
     box-sizing: border-box;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message__name {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.chat-message__text {
+    font-size: 14px;
+    display: inline-block;
+    max-width: 250px;
+    border-radius: 8px;
+    background: #a6a6a6;
+    padding: 7px 17px;
+    margin-top: 6px;
+    word-break: break-word;
+}
+
+.chat-message__time {
+    display: block;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    font-size: 10px;
+    position: bottom;
+    color: #999;
+}
+
+.chat-message--me {
+    text-align: right;
+}
+
+.chat-message--me .chat-message__text{
+    background-color: #caf7a7;
+}
+
+.chat-message--other .chat-message__text{
+    background-color: #fff;
+}
+
+
+/* 入力エリア（カードの一番下） */
+.chat-input-area {
+    display: flex;
+    padding: 8px 10px;
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+
+
+#chatInput {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-right: 8px;
+}
+
+#chatSendBtn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background: #0f9d58;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#chatSendBtn:hover {
+    background: #0c7e46;
+}
+
+/* 自分のメッセージの中の「名前」だけ非表示にする */
+.chat-message--me .chat-message__name {
+  display: none;
+}
+
+
+/* =============================
+    表示/非表示設定
+============================= */
+/* 最初はログイン画面だけ出したいので隠しておく */
+.personal_setting,
+.chat-section {
+    display: none;
 }
