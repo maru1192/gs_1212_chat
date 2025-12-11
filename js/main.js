@@ -240,6 +240,13 @@ $(function () {
         $("#chatInput").val("")
     });
 
+    $("#chatForm").on("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey){
+            e.preventDefault();
+            $("#chatForm") .submit();
+        }
+    });
+
 
 
     // 🔸 メッセージ受信（既存＋新規が全部ここに流れてくる）

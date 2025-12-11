@@ -163,7 +163,6 @@
 }
 
 .chat-wrapper {
-    max-width: 800px;
     margin: 0 auto;
     height: 95vh;
     display: flex;
@@ -171,19 +170,11 @@
     /* 上:タイトル 中:メッセージ 下:入力バー */
 }
 
-.chat-title {
-    margin: 0;
-    padding: 12px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    border-bottom: 1px solid #e0e0e0;
-}
-
 /* メッセージ表示エリア */
 .chat-messages {
     flex: 1;
     /* ここが余った高さぜんぶ使う */
-    padding: 12px 16px;
+    padding: 12px 100px;
     overflow-y: auto;
     /* 多くなったらスクロール */
     box-sizing: border-box;
@@ -223,11 +214,11 @@
     text-align: right;
 }
 
-.chat-message--me .chat-message__text{
+.chat-message--me .chat-message__text {
     background-color: #caf7a7;
 }
 
-.chat-message--other .chat-message__text{
+.chat-message--other .chat-message__text {
     background-color: #fff;
 }
 
@@ -235,11 +226,23 @@
 /* 入力エリア（カードの一番下） */
 .chat-input-area {
     display: flex;
-    padding: 8px 10px;
+    padding-top: 8px;
+    margin-left: 100px;
+    margin-right: 100px;
     border-top: 1px solid #e0e0e0;
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 767px) {
+    .chat-messages {
+        padding: 12px 18px;
+    }
+
+    .chat-input-area {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
 
 
 #chatInput {
@@ -268,7 +271,7 @@
 
 /* 自分のメッセージの中の「名前」だけ非表示にする */
 .chat-message--me .chat-message__name {
-  display: none;
+    display: none;
 }
 
 
