@@ -1,9 +1,9 @@
 # ①課題名
 LINE風チャット
-!["ログイン画面1"]("img/explanation_1.png")
-!["ログイン画面2"]("img/explanation_2.png")
-!["ログイン情報入力欄"]("img/explanation_3.png")
-!["チャット画面"]("img/explanation_4.png")
+!["ログイン画面1"]("./img/explanation_1.png")
+!["ログイン画面2"]("./img/explanation_2.png")
+!["ログイン情報入力欄"]("./img/explanation_3.png")
+!["チャット画面"]("./img/explanation_4.png")
 
 ## ②課題内容（どんな作品か）
 ・LINEのように相手とメッセージのやり取りができるチャット。
